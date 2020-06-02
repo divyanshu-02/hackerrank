@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int a[26],i,h,d,l;
+    for(i=0;i<26;i++)
+    {
+        cin>>a[i];
+    }
+    string s;
+    cin>>s;
+    l=s.size();
+    h=a[(s[0]-97)];
+    for(i=1;i<l;i++)
+    {
+        if(h<a[(s[i]-97)])
+        {
+            h=a[(s[i]-97)];
+        }
+    }
+    d=h*l;
+    cout<<d;
+    return 0;
+}
