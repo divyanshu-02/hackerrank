@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+struct bunk
+{
+    int d;
+    int a[1000];
+    int k;
+};
+int main()
+{
+    int t,p,i,j;
+    cin>>t;
+    bunk b[10];
+    for(i=0;i<t;i++)
+    {
+        cin>>b[i].d;
+        cin>>b[i].k;
+        for(j=0;j<b[i].d;j++)
+        {
+            cin>>b[i].a[j];
+        }
+    }
+    for(i=0;i<t;i++)
+    {
+        p=0;
+        for(j=0;j<b[i].d;j++)
+        {
+            if(b[i].a[j]<=0)
+                p++;    
+        }
+        if(b[i].k>p)
+            cout<<"YES"<<endl;
+        else
+            cout<<"NO"<<endl;    
+    }
+    return 0;
+}
