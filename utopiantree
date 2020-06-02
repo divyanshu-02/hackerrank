@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int t;
+    cin>>t;
+    int a[t],i,j,b[t]={0};
+    for(i=0;i<t;i++)
+    {
+        cin>>a[i];
+    }
+    for(i=0;i<t;i++)
+    {
+        for(j=0;j<=a[i];j++)
+        {
+            if(j%2==0)
+            {
+                b[i]=b[i]+1;
+            }
+            else
+            {
+                b[i]=b[i]*2;
+            }
+        }
+    }
+    for(i=0;i<t;i++)
+    {
+        cout<<b[i]<<endl;
+    }
+    return 0;
+}
