@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    long long int n,l,i,d=0,c=0;
+    cin>>n;
+    int p;
+    string s;
+    cin>>s;
+    l=s.length();
+   
+        p=1;
+    for(i=0;i<=l;i++)
+    {
+        if(d==0&&p==-1)
+        {
+            c++;    
+        }
+        if(d==0)
+        {
+            if(s[i]=='U')
+                p=1;
+            else
+                p=-1;    
+        }
+        if(s[i]=='U')
+        {
+            d++;
+        }
+        if(s[i]=='D')
+        {
+            d--;
+        }
+        
+    }
+    cout<<c;
+    return 0;
+}
