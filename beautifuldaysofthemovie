@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    long long int i,j,k,p,s,q,t,r,u,v,c=0;
+    cin>>i>>j>>k;
+    for(p=i;p<=j;p++)
+    {
+        q=p;
+        r=p;
+        s=0;
+        v=0;
+        while(r!=0)
+        {
+            r=r/10;
+            v++;
+        }
+        u=v-1;
+        while(q!=0)
+        {
+            t=q%10;
+            q=q/10;
+            s=s+(t*pow(10,u));
+            u--;
+        }
+        if(abs(p-s)%k==0)
+        {
+            c++;
+        }
+    }
+    cout<<c;
+    return 0;
+}
