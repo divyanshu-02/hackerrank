@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int t,i;
+    cin>>t;
+    long long int n[t],m[t],s[t],k;
+    for(i=0;i<t;i++)
+    {
+        cin>>n[i]>>m[i]>>s[i];
+    }
+    for(i=0;i<t;i++)
+    {
+        k=s[i]+m[i]-1;
+        while(k>n[i])
+        {
+            k=k-n[i];
+        }
+        cout<<k<<endl;
+    }
+    return 0;
+}
