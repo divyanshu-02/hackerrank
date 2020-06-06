@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    long long int i,j,n,m;
+    long long int b,max,s;
+    cin>>b>>n>>m;
+    long long int key[n],usb[m];
+    for(i=0;i<n;i++)
+    {
+        cin>>key[i];
+    }
+    for(i=0;i<m;i++)
+    {
+        cin>>usb[i];
+    }
+    max=-1;
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+            s=key[i]+usb[j];
+            if(s>max&&s<=b)
+            {
+                max=s;
+            }
+        }
+    }
+    cout<<max;    
+    return 0;
+}
