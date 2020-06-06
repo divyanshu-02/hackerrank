@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int q,i;
+    cin>>q;
+    int x[q],y[q],z[q];
+    for(i=0;i<q;i++)
+    {
+        cin>>x[i]>>y[i]>>z[i];
+    }
+    for(i=0;i<q;i++)
+    {
+        if(abs(x[i]-z[i])==abs(y[i]-z[i]))
+            cout<<"Mouse C"<<endl;
+        else if(abs(x[i]-z[i])<abs(y[i]-z[i]))
+            cout<<"Cat A"<<endl;
+        else 
+            cout<<"Cat B"<<endl;        
+    }
+    return 0;
+}
