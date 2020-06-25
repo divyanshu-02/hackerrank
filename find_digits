@@ -1,0 +1,37 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    long long int t;
+    cin>>t;
+    long long int a[t],b[t],c[t]={0},i,j,d;
+    for(i=0;i<t;i++)
+    {
+        cin>>a[i];
+        b[i]=a[i];
+    }
+    for(i=0;i<t;i++)
+    {
+        j=1;
+        while(b[i]>0)
+        {
+            d=b[i]%10;
+            if(d!=0)
+            {
+                if(a[i]%d==0)
+                {
+                    c[i]++;
+                }
+            }    
+            b[i]=b[i]/10;
+            j++;
+        }
+    }
+    for(i=0;i<t;i++)
+    {
+        cout<<c[i]<<endl;
+    }
+    return 0;
+}
